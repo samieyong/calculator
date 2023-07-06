@@ -1,0 +1,93 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+html {
+   font-size: 62.5%;
+}
+body {
+   background-color: rgb(31, 19, 19);
+}
+.container {
+   width: 100%;
+   height: 95vh;
+   display: grid;
+   place-items: center;
+}
+.calculator {
+   width: 30rem;
+   height: 45rem;
+   padding: 1rem;
+   background-color: rgb(44, 39, 48);
+   border: 0.2rem solid rgb(27, 27, 27);
+   border-radius: 2rem;
+   box-shadow: 0 0.1rem 1rem rgb(78, 78, 78);
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 0.8rem;
+   position: relative;
+}
+.screen {
+   margin-bottom: 1rem;
+   grid-column: 1/5;
+   border-radius: 1rem;
+   background-color: rgb(42, 47, 54);
+   padding: 1rem;
+   text-align: right;
+   font-size: 2.4rem;
+   color: rgb(167, 164, 164);
+   font-weight: 600;
+   outline: transparent;
+}
+.emblem {
+   font-size: 1.4rem;
+   color: rgb(117, 117, 117);
+   text-align: center;
+   position: absolute;
+   top: 1.5rem;
+   left: 1.6rem;
+   opacity: 0.6;
+}
+.btn,
+.equals,
+.clear,
+.backspace {
+   border-radius: 0.5rem;
+   color: rgb(167, 164, 164);
+   font-size: 1.8rem;
+}
+.btn:active,
+.equals:active,
+.clear:active,
+.backspace:active {
+   filter: brightness(2);
+}
+.btn,
+.backspace {
+   background: linear-gradient(rgb(46, 31, 31), rgb(27, 31, 51));
+}
+.clear {
+   grid-column: 1/3;
+   background: linear-gradient(rgb(199, 27, 27), rgb(75, 12, 43));
+}
+.equals {
+   background: linear-gradient(rgb(22, 175, 29), rgb(1, 58, 1));
+}
+
+footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 5vh;
+}
+footer p {
+   font-size: 1.4rem;
+   color: rgb(167, 164, 164);
+}
+
+@media screen and (max-width: 314px) {
+   .calculator {
+      width: 100%;
+   }
+}
